@@ -6,6 +6,7 @@ click==8.1.7
 colorama==0.4.6
 coverage==7.6.0
 defusedxml==0.7.1
+dj-database-url==0.5.0
 Django==3.2.25
 django-allauth==0.41.0
 django-countries==7.2.1
@@ -26,6 +27,7 @@ Missing==5.0
 oauthlib==3.2.2
 packaging==24.1
 pillow==10.4.0
+psycopg2==2.9.10
 psycopg2-binary==2.9.9
 PyMySQL==1.1.1
 python-decouple==3.8
