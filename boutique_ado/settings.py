@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['boutique-ado-brian-mcananey.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['https://boutique-ado-brian-mcananey-6a8330e589d2.herokuapp.com/', 'localhost']
 
 
 # Application definition
@@ -65,7 +65,14 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'boutique_ado.urls'
 
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://boutique-ado-brian-mcananey.herokuapp.com'
+]
+
 
 TEMPLATES = [
     {
