@@ -23,10 +23,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['https://boutique-ado-brian-mcananey-6a8330e589d2.herokuapp.com/', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['boutique-ado-brian-mcananey-6a8330e589d2.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -70,7 +73,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://boutique-ado-brian-mcananey.herokuapp.com'
+    'https://boutique-ado-brian-mcananey-6a8330e589d2.herokuapp.com',
 ]
 
 
@@ -205,7 +208,7 @@ if 'USE_AWS' in os.environ:
 FREE_DELIVERY_THRESHOLD = 50
 STANDARD_DELIVERY_PERCENTAGE = 10
 STRIPE_CURRENCY = 'usd'
-STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
-STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_TEST_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_TEST_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 DEFAULT_FROM_EMAIL = 'boutiqueado@example.com'
