@@ -29,7 +29,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['boutique-ado-brian-mcananey-6a8330e589d2.herokuapp.com', 'localhost']
+
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'localhost',
+    'boutique-ado-brian-mcananey-6a8330e589d2.herokuapp.com'
+]
 
 
 # Application definition
@@ -74,6 +79,8 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 CSRF_TRUSTED_ORIGINS = [
     'https://boutique-ado-brian-mcananey-6a8330e589d2.herokuapp.com',
+    'http://127.0.0.1',
+    'http://localhost',
 ]
 
 
@@ -113,7 +120,6 @@ AUTHENTICATION_BACKENDS = (
 )
 
 SITE_ID = 1
-
 
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'

@@ -3,10 +3,10 @@ html {
 }
 
 body {
-    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
+    background: url('/media/RWR_HomeBanner2.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: #555;
+    color: #003366;
     font-family: 'Lato';
 }
 
@@ -28,26 +28,26 @@ body {
 }
 
 .shop-now-button {
-    background: black;
+    background: #003366;
     color: white;
     min-width: 260px;
 }
 
 .btn-black {
-    background: black;
+    background: #003366;
     color: white;
 }
 
 .btn-outline-black {
     background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
+    color: #003366 !important; /* use important to override link colors for <a> elements */
     border: 1px solid black;
 }
 
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {
-    background: black;
+    background: #003366;
     color: white !important;
 }
 
@@ -62,15 +62,15 @@ body {
 }
 
 .text-black {
-    color: #000 !important;
+    color: #003366 !important;
 }
 
 .border-black {
-    border: 1px solid black !important;
+    border: 1px solid #003366 !important;
 }
 
 .bg-black {
-    background: #000 !important;
+    background: #003366 !important;
 }
 
 .overlay {
