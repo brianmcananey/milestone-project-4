@@ -83,7 +83,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://boutique-ado-brian-mcananey-6a8330e589d2.herokuapp.com',
+    # 'https://boutique-ado-brian-mcananey-6a8330e589d2.herokuapp.com',
     'http://127.0.0.1',
     'http://localhost',
 ]
@@ -235,7 +235,7 @@ STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 if 'DEVELOPMENT' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    DEFAULT_FROM_EMAIL = 'boutiqueado@example.com'
+    DEFAULT_FROM_EMAIL = 'aphroditeclothingexample.com'
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
     EMAIL_USE_TLS = True
