@@ -30,14 +30,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = 'DEVELOPMENT' in os.environ
-DEBUG = True
+DEBUG = 'DEVELOPMENT' in os.environ
 
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
-    'boutique-ado-brian-mcananey-6a8330e589d2.herokuapp.com'
+    'https://aphrodite-clothing-brian-mc-c3a3e25ecbf0.herokuapp.com'
 ]
 
 
@@ -83,7 +82,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
 CSRF_TRUSTED_ORIGINS = [
-    # 'https://boutique-ado-brian-mcananey-6a8330e589d2.herokuapp.com',
+    'https://aphrodite-clothing-brian-mc-c3a3e25ecbf0.herokuapp.com',
     'http://127.0.0.1',
     'http://localhost',
 ]
