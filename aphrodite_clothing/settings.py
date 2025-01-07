@@ -37,6 +37,7 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
     'aphrodite-clothing-brian-mc-c3a3e25ecbf0.herokuapp.com',
+    'aphrodite-clothing-brian-mc.herokuapp.com',
 ]
 
 
@@ -78,6 +79,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'aphrodite_clothing.urls'
+
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
