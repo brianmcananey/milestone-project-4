@@ -57,6 +57,6 @@ zipp==3.18.1
 zope.deferredimport==5.0
 zope.interface==6.3
 zope.proxy==5.2
-setuptools>=56.0.0
+setuptools>=70.0.0
 wheel>=0.45.1
 git+https://github.com/pennersr/django-allauth.git@main#egg=django-allauth
