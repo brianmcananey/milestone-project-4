@@ -254,7 +254,3 @@ else:
         raise ValueError("EMAIL_HOST_USER and EMAIL_HOST_PASSWORD must be set in the environment.")
 
     DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-
-
-import django_heroku
-django_heroku.settings(locals())
