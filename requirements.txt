@@ -10,7 +10,7 @@ coverage==7.6.0
 defusedxml==0.7.1
 dj-database-url==0.5.0
 Django==3.2.25
-django-allauth==0.41.0
+django-allauth==0.40.0
 django-countries==7.2.1
 django-crispy-forms==1.14.0
 django-storages==1.14.4
@@ -58,3 +58,4 @@ zope.deferredimport==5.0
 zope.interface==6.3
 zope.proxy==5.2
 setuptools>=70.3.0
+wheel>=0.45.1
