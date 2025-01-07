@@ -36,7 +36,7 @@ DEBUG = False
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
-    'aphrodite-clothing-brian-mc-c3a3e25ecbf0.herokuapp.com'
+    'aphrodite-clothing-brian-mc-c3a3e25ecbf0.herokuapp.com',
 ]
 
 
@@ -132,7 +132,8 @@ AUTHENTICATION_BACKENDS = (
 SITE_ID = 1
 
 
-ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+#ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+ACCOUNT_LOGIN_METHODS = ['email', 'username']
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True

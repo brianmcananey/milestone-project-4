@@ -15,9 +15,9 @@ django-crispy-forms==1.14.0
 django-storages==1.14.4
 ExtensionClass==5.1
 flake8==7.1.1
-Flask==3.0.3
-Flask-MySQL==1.5.2
-Flask-SQLAlchemy==3.1.1
+#Flask==3.0.3
+#Flask-MySQL==1.5.2
+#Flask-SQLAlchemy==3.1.1
 greenlet==3.0.3
 gunicorn==22.0.0
 idna==3.7
