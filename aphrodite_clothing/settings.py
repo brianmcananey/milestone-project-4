@@ -15,6 +15,7 @@ from decouple import config
 import os
 import dj_database_url
 
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -253,7 +254,8 @@ else:
     EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')  # Use config to load from .env
 
     if not EMAIL_HOST_USER or not EMAIL_HOST_PASSWORD:
-        raise ValueError("EMAIL_HOST_USER and EMAIL_HOST_PASSWORD must be set in the environment.")
+        raise ValueError(
+            "EMAIL_HOST_USER and EMAIL_HOST_PASSWORD must be set in the environment.")
 
     DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
@@ -276,3 +278,8 @@ LOGGING = {
         },
     },
 }
+
+
+import os
+print(os.environ.get('AWS_ACCESS_KEY_ID'))
+print(os.environ.get('AWS_SECRET_ACCESS_KEY'))
