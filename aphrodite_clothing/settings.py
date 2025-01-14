@@ -88,7 +88,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://aphrodite-clothing-brian-mc-c3a3e25ecbf0.herokuapp.com',
+    'https://aphrodite-clothing-brian-mc-c3a3e25ecbf0.herokuapp.com/',
     'http://127.0.0.1',
     'http://localhost',
 ]
@@ -133,7 +133,7 @@ AUTHENTICATION_BACKENDS = (
 SITE_ID = 1
 
 
-#ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+# ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_LOGIN_METHODS = ['email', 'username']
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
