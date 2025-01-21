@@ -87,12 +87,14 @@ I also personally tested the website on Samsung Galaxy S22, Samsung Chrome book,
 
 | Page | Test Results | Lighthouse Suggested Improvements |
 |:---:|---|---|
-|Index|![Index Lighthouse testing](static/images/hompage-lighthouse.png)|Specifying a specific width and height of my title image, I wanted to retain as much responsivity as I could and opted to use bootstrap instead.|
-|About Page|![About Page Lighthouse testing](static/images/aboutpage-lighthouse.png)|Properly sizing the images would reduce load time and cellular data, currently some images are oversized and are slowing down the time it takes for the page to load.|
-|Sign Up|![Sign Up Lighthouse testing](static/images/signup-lighthouse.png)|Similar results to the Index page, page is loading well.|
-|Log In|![Log In Lighthouse testing](static/images/login-lighthouse.png)|Similar results to the Index page and Sign up page, page is loading well.|
-|Contact|![Contact Page Lighthouse testing](static/images/contact-lighthouse.png)|Similar results to the Index page and Sign up page, page is loading well.|
-|Mobile|![Mobile Lighthouse testing](static/images/mobile-lighthouse.png)|This didn't perform as well as the desktop testing, need to review image sizes and loading times to improve the performance.|
+|Index|![Index Lighthouse testing](media/lighthouse-desktop.png)|Specifying a specific width and height of my title image, I wanted to retain as much responsivity as I could and opted to use bootstrap instead.|
+|All Products Page|![All Products Page Lighthouse testing](media/lighthouse-all-products.png)|Properly sizing the images would reduce load time and cellular data, currently some images are oversized and are slowing down the time it takes for the page to load.|
+|All Clothing|![All Clothing Lighthouse testing](media/lighthous-clothing.png)|Similar results to the Index page, page is loading well.|
+|All Footware|![All Footware Lighthouse testing](media/lighthouse-footware.png)|Similar results to the Index page and Sign up page, page is loading well.|
+|All Specials|![All Specials Lighthouse testing](media/lighthouse-specials.png)|Similar results to the Index page and Sign up page, page is loading well.|
+|Sign Up|![Sign Up Lighthouse testing](media/lighthouse-signup.png)|Similar results to the Index page and Sign up page, page is loading well.|
+|Login|![Login Lighthouse testing](media/lighthouse-login.png)|Similar results to the Index page and Sign up page, page is loading well.|
+|Mobile|![Mobile Lighthouse testing](media/lighthouse-mobile.png)|This didn't perform as well as the desktop testing, need to review image sizes and loading times to improve the performance.|
 
 
 ### HTML and CSS Validation <!-- omit in toc -->
@@ -122,8 +124,6 @@ All website pages were tested using the A11y Color Contrast Accessibility Checke
 ## Python Testing <!-- omit in toc -->
 
 - Throughout I tested in the terminal.
-
-![Python Terminal](static/images/terminal-debug.png)
 
 - I valdated my python through the Code Institute Python Linter
 

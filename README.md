@@ -390,7 +390,7 @@ From the AWS Management Console.
     - From the Access Control List (ACL) section click edit and enable List for Everyone (public access) and accept the warning box.
 
   ### IAM
-  
+
   Back on the AWS service menu, search for IAM (Identity and access management). Once on the IAM page
 
   - From User Groups click Create New Group
@@ -433,6 +433,62 @@ From the AWS Management Console.
   - under the User Summary on the right click on Create Access Key
     - set AWS_ACCESS_KEY_ID = Access Key ID
     - AWS_SECRET_ACCESS_KEY = Secret Access Key
+
+### Connecting S3 to Django 
+- Go back to your IDE and install 2 more requirements:
+    - `pip3 install boto3`
+    - `pip3 install django-storages` 
+- Update your requirements.txt file by typing `pip3 freeze --local > requirements.txt` and add storages to your installed apps.
+- Create an if statement in settings.py 
+
+```
+if 'USE_AWS' in os.environ:
+    AWS_STORAGE_BUCKET_NAME = 'insert-your-bucket-name-here'
+    AWS_S3_REGION_NAME = 'insert-your-region-here'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+
+```
+- Then add the line 
+
+    - `AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'` to tell django where our static files will be coming from in production.
+
+
+- Create a file called custom storages and import both our settings from django.con as well as the s3boto3 storage class from django storages. 
+- Create the following classes:
+
+```
+class StaticStorage(S3Boto3Storage):
+    location = settings.STATICFILES_LOCATION
+
+class MediaStorage(S3Boto3Storage):
+    location = settings.MEDIAFILES_LOCATION
+```
+
+- In settings.py add the following inside the if statement:
+
+```
+STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+STATICFILES_LOCATION = 'static'
+DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+MEDIAFILES_LOCATION = 'media'
+STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
+```
+
+- and then add the following at the top of the if statement:
+```
+AWS_S3_OBJECT_PARAMETERS = {
+    'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+    'CacheControl': 'max-age=94608000',
+}
+```
+
+- Go to S3, go to your bucket and click 'Create folder'. Name the folder 'media' and click 'Save'.
+- Inside the folder, click 'Upload', 'Add files', and then select all the images that you are using for your site.
+- Then under 'Permissions' select the option 'Grant public-read access' and click upload.
+- Your static files and media files should be automatically linked from django to your S3 bucket.
   
 ### Final Setup
   - Back within S3 buckets create folder media
