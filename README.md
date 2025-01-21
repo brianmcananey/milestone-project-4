@@ -8,9 +8,9 @@ HTML / CSS / Jquery / Python / Jinja2 / Flask / MySQL / Stripe
 
 By Brian McAnaney
 
-![screenshot](media\laptop.png)
-![screenshot](media\iphone12-pro.png)
-![screenshot](media\ipad.png)
+![screenshot](media/laptop.png)
+![screenshot](media/iphone12-pro.png)
+![screenshot](media/ipad.png)
 
 
 [View Live Deployment](https://aphrodite-clothing-brian-mc-c3a3e25ecbf0.herokuapp.com/)
