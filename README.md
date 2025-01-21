@@ -1,131 +1,370 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# [Aphrodite Clothing](https://aphrodite-clothing-brian-mc-c3a3e25ecbf0.herokuapp.com/)
 
-Welcome USER_NAME,
+ A responsive web application for Users to view and buy items from a clothing store.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+**Code Institute - Milestone Project 4**
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+HTML / CSS / Jquery / Python / Jinja2 / Flask / MySQL / Stripe
 
-## Gitpod Reminders
+By Brian McAnaney
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+![screenshot](static/images/UI-screenshot.png)
+Image from [UI.dev]()
 
-`python3 -m http.server`
+[View Live Deployment](https://aphrodite-clothing-brian-mc-c3a3e25ecbf0.herokuapp.com/)
 
-A blue button should appear to click: _Make Public_,
+## Strategy
 
-Another blue button should appear to click: _Open Browser_.
+### THE 5 PLANES
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+- **Purpose of the website?**
 
-A blue button should appear to click: _Make Public_,
+    Provide a platform for customers to view and buy clothing.
 
-Another blue button should appear to click: _Open Browser_.
+- **Target audience?**
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+    * Customers: People who would like to buy items for themselves.
 
-To log into the Heroku toolbelt CLI:
+    * Potential: those who may want to buy for themselves at a later date or to buy for someone else.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- **Value to the user?**
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+    * Recommendations: each item has a rating which helps with potential purchase decisions.
 
-### Connecting your Mongo database
+    * Convenience: Users can shop from the comfort of their homes, avoiding the hassle of traveling to physical stores.
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+    * Price Comparison: Users can easily compare prices across different websites to find the best deals.
 
-------
+- **What makes a good experience ?**
 
-## Release History
+    * User-Friendly Interface: A well-designed and intuitive interface that is easy to navigate, ensuring that users can find and view different items.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+    * Responsive Design: A website that adapts seamlessly to various devices and screen sizes, ensuring a consistent and enjoyable experience whether users are on desktop, tablet, or mobile.
 
-**June 18, 2024,** Add Mongo back into template
+    * Accessibility: Ensuring that the website is accessible to users with disabilities, including features like alt text for images and keyboard navigation.
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
 
-**May 28 2024:** Fix Mongo and Links installs
+- **What we shouldn't do?**
 
-**April 26 2024:** Update node version to 16
+    * Spam or Over-Promotion: We do not engage in spammy practices, including excessive advertising, unsolicited emails, or intrusive pop-ups that disrupt the user experience.
 
-**September 20 2023:** Update Python version to 3.9.17.
+    * Plagiarism: We do not plagiarize content from other sources. All content on our platform is original, properly attributed, and respects copyright laws.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+    * Neglecting User Privacy: We do not compromise user privacy by sharing or selling personal information without consent. We adhere to strict privacy policies to protect user data.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### The Why
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+To help the business gain more custom, to provide users with a place to read honest reviews, and to help them with their choices.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### The Business Goal
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+## Business Goal
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+Our primary goal is to create a user-friendly online platform that offers a wide range of high-quality clothing and accessories. We aim to provide competitive pricing and excellent customer service. Our mission is to become a trusted and preferred destination for fashion enthusiasts, driving sales growth and building long-term customer loyalty.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## UX
+### Color Scheme
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+- Here are the colors chosen, I believe they have a good contrast to the hero image and background colors. They are also uniformed throughout the site.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+![screenshot](media\colors.png)
+    
+### Typography
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+- I have chosen the "sans-serif" font and "Lato" as I believe it suits the layout of the website and simple style the website is going for. The back-up font is Times New Roman.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+![screenshot](media\sans-serif.png)
+![screenshot](media\lato.png)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Imagery
 
-------
+* Imagery is very important to the website as the site needs to show off the clothing and be appealing for people to come and visit and buy from the site.
 
-## FAQ about the uptime script
+* The pages will be consistent with the same fonts and colors in the contents of the pages. They will also have the same navbar and footer.
 
-**Why have you added this script?**
+### Icons
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+* I used icons from Font Awesome to encourage users to click on certain buttons and to add a clear visual indicator of where to click.
 
-**How will this affect me?**
+## Structure
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### Information Architecture
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+* I used a similar layout to the Boutique Ado example in the Code Institute course as I believed it would suit the layout of my hero image and website as a whole. The website has a Homepage, then further pages for items of clothes, login/register and a checkout.
+  - Homepage - Large hero image showing an item of clothing. it also has a button to go to other items.
+  - All Products - This will have sub-sections / pages where you can view ALL items but in different orders, for example raing or price.
+  - Clothing - This will have sub-sections / pages where you can view the items classed as clothes but in different orders, for example type of clothing (jeans, coats).
+  - Footware - This will have sub-sections / pages where you can view the items classed as footware but in different orders, for example type of footware( trainers).
+  - Login / Register - Simple page with matching colors to allow people to register or sign up.
+  - Checkout / Bag - Simple page using Stripe and JS to allow purchases.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+## User Stories
 
-**So….?**
+- **First-Time User Goals**
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+    - Enjoy a User-Friendly Experience: A user-friendly interface and navigation system that allows users to easily explore the website and discover items of clothing.
 
-**Can I opt out?**
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+- **Returning User Goals**
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+    - Account Management: Allow users to easily manage their account details, order history, and preferences..
 
-**Anything more?**
+    - Smooth Navigation: Maintain an intuitive and user-friendly interface that makes it easy for users to find what they're looking for.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+- **Website Owner Goals**
+   
+    - Revenue: Create a revenue stresam throuogh possible advertising.
 
----
+    - Sign ups: If a user registers for an account they are more likely to come back.
 
-Happy coding!
+
+
+## Wireframes
+The basic layout of Aphrodite Clothing was created with [Balsamiq](https://balsamiq.com/).
+
+![Wireframes](static/images/wireframes.png)
+
+
+
+## Features
+
+### Existing Features
+
+ - **Navigation Bar**
+    - The navigation bar is a central feature that enhances the user experience by providing easy access to key functionalities and content.  Whether on a desktop or a mobile device, users can seamlessly navigate through the application with the help of this feature.
+
+    -  Depending on the user's role and session status, the Nav Bar & Dropdown provide a set of relevant links for easy navigation
+
+    - The Naviagtion bar was created with [Materialize](https://materializecss.com/)
+
+![Desktop Navbar](media\desktop-navbar.png)
+
+![Mobile Navbar](media\mobile-navbar.png)
+
+ - **Footer Bar**
+  - The Footer includes the social media links for the website.
+  - Social media links open in a new page.
+  - The Footer remains consistent on all pages.
+  - Has a Mailchimp platform to provide users to subscribe for more info
+
+![Footer](media\footer.png)
+
+
+
+- **Log In and Sign Up**
+    - I added a Sign up Feature so users can provide their own details, for example address and payment details.
+
+    - Users that are Signed Up and Logged in can edit their personal informaton.
+
+
+
+
+## **DATABASES**
+In this application, I rely on [MySQL](https://mysql.com/) as the primary database management system. MySQL is an open sourced database that allows us to store and manage data in a format that seamlessly fits the dynamic nature of our project. It plays a crucial role in storing user information, reviews and other essential data.
+
+
+### CRUD Functionality
+
+- **User Management:**
+1. **Create User (C):**
+   - Description: Allows users to register by providing necessary information. Includes checks for:
+     - Matching passwords
+     - Existing username
+
+    - HTTP Method: POST
+
+    - Database Operation: Inserts new user document into the "users" collection.
+
+2. **Read User (R):**
+    - Function: 'autheticate_user'
+
+    - Description: Authenticates a user based on their username and password.
+
+    - HTTP Method: N/A(Called within the sign_in route)
+
+    - Database Operation: Reads user information to verify credentials.
+
+
+2. **Sign In (R):**
+    - Function: 'sign_in'
+
+    - Description: Allows users to sign in by providing their credentials. Includes checks for:
+        - Incorrect username or password
+
+    - HTTP Method: GET and POST
+
+    - Database Operation: Calls authenticate_user to validate user credentials.
+
+3. **Log Out:**
+    - Description: Allows users to log out of their accounts.
+
+    - HTTP Method: GET
+
+    - Database Operation: N/A 
+
+    The log out function works by removing the users session cookie (session.clear).
+
+
+## **TESTING**
+
+For the documentation of all testing,Please see [TESTING.md](TESTING.md) 
+
+## DEPLOYMENT
+### Local Deployment
+This project can be cloned or forked in order to make a local copy on your own system.
+
+#### Cloning
+
+You can clone this repository by following these steps:
+
+1. Go to the [GitHub repository](https://github.com/brianmcananey/VSCode_Project3) 
+2. Locate the Code button above the list of files and click it 
+3. Select if you prefer to clone using HTTPS, SSH, or GitHub CLI and click the copy button to copy the URL to your clipboard
+4. Open Git Bash or Terminal
+5. Change the current working directory to the one where you want the cloned directory
+6. In your IDE Terminal, type the following command to clone my repository:
+        - `git clone https://github.com/brianmcananey/VSCode_Project3`
+7. Press Enter to create your local clone.
+
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Jaycode88/veg-centric-msp3)
+
+Please note that in order to directly open the project in Gitpod, you need to have the browser extension installed.
+A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/configure/user-settings/browser-extension)
+
+#### Forking
+
+By forking the GitHub Repository, we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original owner's repository.
+    
+You can fork this repository by using the following steps:
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/brianmcananey/VSCode_Project3)
+2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
+
+#### Running Locally
+
+After you have cloned or forked the repository and navigated to the project directory, you can set up your local environment as follows:
+
+1. **Install Dependencies**: Make sure you have Python 3.x installed on your system. Then, install the required dependencies listed in the `requirements.txt` file:
+
+    ```  
+    pip install -r requirements.txt
+    ``` 
+
+2. **Configure Environment Variables**: If your application requires environment variables, create a `.env` file in the project directory and add the necessary variables.
+
+3. **.gitignore File**: Ensure that you have a `.gitignore` file in your project to exclude sensitive information and files from being committed to version control. Common entries in a `.gitignore` file include `.env`, `.pyc` files, and other temporary or generated files.
+
+4. **Run the Application**: Start the local development server using the following command:
+
+    ```
+    python3 app.py
+    ```
+
+Replace `app.py` with the actual name of your main application file.
+
+### Deployment with Heroku
+
+This application can be deployed on Heroku to make it accessible on the web. Follow these steps to deploy your app:
+
+#### Prerequisites
+
+Before deploying the app on Heroku, make sure you have the following prerequisites:
+
+1. [Heroku Account](https://signup.heroku.com/) - You need a Heroku account to deploy your app.
+2. [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) - Install the Heroku Command Line Interface to interact with Heroku from your terminal.
+
+#### Deployment Steps
+
+1. **Login to Heroku**: Open your terminal and log in to your Heroku account using the following command:
+   
+    ```
+    heroku login
+    ```
+    Follow the prompts to log in to your Heroku account.
+
+2. **Create a Heroku App**: Navigate to your project directory in the terminal and create a new Heroku app
+    ```
+    heroku create your-app-name
+    ```
+    Replace your-app-name with a unique name for your app. Heroku will provide you with a URL for your app (e.g., https://your-app-name.herokuapp.com/).
+
+3. **Configure Environment Variables**: Store sensitive information like secret keys and API credentials as environment variables on Heroku. You can set these variables using the Heroku CLI or through the Heroku Dashboard
+    ```
+    heroku config:set SECRET_KEY=your-secret-key
+    heroku config:set API_KEY=your-api-key
+    ```
+    Replace your-secret-key and your-api-key with the actual values you need to configure.
+
+4. **Deploy to Heroku**: Deploy your app to Heroku by pushing your code to the Heroku remote repository
+    ```
+    git push heroku main
+    ```
+    Ensure that you have committed all your changes to the main branch before running this command.
+
+5. **Open the App**: Once the deployment is complete, you can open your app in your web browser using the following command.
+    ```
+    heroku open
+    ```
+    This will open your app in a new browser window.
+
+### Local vs Deployment
+
+When working with this project, it's important to understand the differences between running the application locally and deploying it to Heroku:
+
+- **Local Development**: Running the application locally is ideal for development and testing purposes. You can make changes, test new features, and experiment with the code in a controlled environment.
+
+- **Heroku Deployment**: Deploying the application to Heroku makes it accessible to a wider audience on the web. It's suitable for sharing your project with others and providing a public URL for access.
+
+Choose the deployment option that best suits your needs and project goals.
+
+Always follow the steps and ensure that your sensitive information(API Keys, Database credentials, etc) are not visible to the public.
+
+
+## Credits
+
+### Content
+ - All worded content was originally creating by myself and then edited and improved with suggestions from [Chat GPT](https://chat.openai.com/).
+
+### Media
+- All Icons Used were from [Font Awesome](https://fontawesome.com/)
+
+
+- **Images**
+    
+   - all images sourced from Google images.
+
+### Tools & Technologies Used
+- [HTML](https://en.wikipedia.org/wiki/HTML)  is the backbone of web content. It defines the structure and content of the web pages.
+- [CSS](https://en.wikipedia.org/wiki/CSS) used to control the visual presentation of the web application. It defines the layout, colors, fonts etc.
+- [JavaScript](https://www.javascript.com) is a client-side scripting language that enhances user interactivity on the web pages.
+- [Python](https://www.python.org/) is a versatile programming language commonly used for server-side development. It powers the logic and data processing of the web application.
+- [Jinja](https://jinja.palletsprojects.com/en/3.1.x/) Is a Python-based templating engine used to dynamically generate HTML content by inserting data into predefined templates.
+- [Materialize](https://materializecss.com/) Is a responsive front-end  framework and was used for many of the app's features.
+- [Cloudinary](https://cloudinary.com/) is a cloud-based service for uploading, storing, optimizing, and delivering media assets such as images and videos.
+- [MySQL](https://mysql.com/) is a database used for storing and managing structured data.
+- [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
+- [GitHub](https://github.com) used for secure online code storage.
+- [Heroku](https://heroku.com) To create and Host the Deployed App.
+- [Balsamiq](https://balsamiq.com/) used to create Wireframes.
+- [Figma](https://www.figma.com/) used to create high fidelity prototypes.
+- [Chat GPT](https://chat.openai.com/) Used for trouble shooting.
+- [Font Awesome](https://fontawesome.com/) For Icons
+- [Google Fonts](https://fonts.google.com/) for all Fonts.
+- [W3C Html Validator](https://validator.w3.org/) Used to validate HTML.
+- [Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/) Used to validate CSS.
+- [JSHint](https://jshint.com/) Used to validate JQuery.
+- [CodeInstitute Python Linter](https://pep8ci.herokuapp.com/) Used to Check Python for PEP-8 Compliance.
+- [UI.dev](https://ui.dev/amiresponsive) Used to create am I responsive image.
+
+
+
+### Acknowledgements
+- I would like to thank Ben Smith and Pascal Fasulo from City of Bristol College for his ongoing support.
+- I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
+- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the great advice.
+- I would like to thank friends and family for there on going support and reviewing of the Web App.

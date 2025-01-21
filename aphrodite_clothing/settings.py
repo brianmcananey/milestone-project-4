@@ -201,8 +201,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+# Points to the 'static' folder in your project root
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),  # Points to the 'static' folder in your project root
+    os.path.join(BASE_DIR, 'static'),
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
@@ -254,7 +255,7 @@ else:
     EMAIL_PORT = 587
     EMAIL_HOST = 'smtp.gmail.com'
     EMAIL_HOST_USER = config('EMAIL_HOST_USER')  # Use config to load from .env
-    EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')  # Use config to load from .env
+    EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')  # config to load .env
 
     if not EMAIL_HOST_USER or not EMAIL_HOST_PASSWORD:
         raise ValueError(
