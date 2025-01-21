@@ -70,14 +70,14 @@ Our primary goal is to create a user-friendly online platform that offers a wide
 
 - Here are the colors chosen, I believe they have a good contrast to the hero image and background colors. They are also uniformed throughout the site.
 
-![screenshot](media\colors.png)
+![screenshot](media/colors.png)
     
 ### Typography
 
 - I have chosen the "sans-serif" font and "Lato" as I believe it suits the layout of the website and simple style the website is going for. The back-up font is Times New Roman.
 
-![screenshot](media\sans-serif.png)
-![screenshot](media\lato.png)
+![screenshot](media/sans-serif.png)
+![screenshot](media/lato.png)
 
 
 ### Imagery
@@ -141,9 +141,9 @@ The basic layout of Aphrodite Clothing was created with [Balsamiq](https://balsa
 
     - The Naviagtion bar was created with [Materialize](https://materializecss.com/)
 
-![Desktop Navbar](media\desktop-navbar.png)
+![Desktop Navbar](media/desktop-navbar.png)
 
-![Mobile Navbar](media\mobile-navbar.png)
+![Mobile Navbar](media/mobile-navbar.png)
 
  - **Footer Bar**
   - The Footer includes the social media links for the website.
@@ -151,7 +151,7 @@ The basic layout of Aphrodite Clothing was created with [Balsamiq](https://balsa
   - The Footer remains consistent on all pages.
   - Has a Mailchimp platform to provide users to subscribe for more info
 
-![Footer](media\footer.png)
+![Footer](media/footer.png)
 
 
 
@@ -325,6 +325,119 @@ When working with this project, it's important to understand the differences bet
 Choose the deployment option that best suits your needs and project goals.
 
 Always follow the steps and ensure that your sensitive information(API Keys, Database credentials, etc) are not visible to the public.
+
+
+### Amazon AWS S3
+
+This project uses Amazon Web Servies (AWS https://aws.amazon.com/) to store static and media files.
+
+Once youve created an AWS account and logged in. You can follow the following steps to setup your static and media files storage.
+
+From the AWS Management Console.
+
+  - Search for S3
+  - Create a new bucket, give it a name matching your Heroku app name and choose a region closest to you
+  - Uncheck Block all public access and acknowledge that the bucket will be public.
+  - From Object ownership make sure ACLs are enabled and Bucket owner preferred is selected
+  - From the Permisssions tab paste in the following CORS configuration
+
+  ```
+    [
+  {
+      "AllowedHeaders": [
+          "Authorization"
+      ],
+      "AllowedMethods": [
+          "GET"
+      ],
+      "AllowedOrigins": [
+          "*"
+      ],
+      "ExposeHeaders": []
+  }
+]
+
+  ```
+
+  - Copy your ARN string
+  - From the Bucket Policy tab, select the Policy Generator link and set
+    - Policy type: S3 Bucket Policy
+    - Effect: Allow
+    - Principal *
+    - Actions: GetObject()
+    - Amazon Resource Name (ARN): paste your ARN here
+    - Click add Statement
+    - Click Generate Policy
+    - Copy entire Policy and paste it into the Bucket Policy editor
+
+    ```
+    {
+    "Version": "2012-10-17",
+    "Id": "Policy1726973504037",
+    "Statement": [
+        {
+            "Sid": "Stmt1726973489892",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::bucket name/*"
+        }
+    ]
+    }
+    ```
+    
+    - Click save
+    - From the Access Control List (ACL) section click edit and enable List for Everyone (public access) and accept the warning box.
+
+  ### IAM
+  
+  Back on the AWS service menu, search for IAM (Identity and access management). Once on the IAM page
+
+  - From User Groups click Create New Group
+  - From User Groups, select newly created group and go to the permissions tab
+  - Open the Add Permissions dropdown and click on Attach Policies
+  - select the policy then click on Add Permissions at the bottom
+  - From the JSON tab select Import Managed Policy link
+    - Search for S3 select AmazonS3FullAccess policy and import
+    
+    ```
+    {
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Statement1",
+            "Effect": "Allow",
+            "Action": [
+                "s3:*"
+            ],
+            "Resource": [
+                "arn:aws:s3:::bucket name",
+                "arn:aws:s3:::bucket name/*"
+            ]
+        }
+    ]
+    }
+    ```
+
+    - Click Review Policy
+    - Provide a description a brief overview of what it for
+    - Click Create Policy 
+
+  - From User Groups click on group created
+  - Click Attach Policy
+  - Search for ther policy youve just created select it and click on Attach Policy
+  - From User Groups click Add User
+  - From Select AWS access type select Programmatic Access
+  - Select the group to add to your user (created above)
+  - Click Create User
+  - under the User Summary on the right click on Create Access Key
+    - set AWS_ACCESS_KEY_ID = Access Key ID
+    - AWS_SECRET_ACCESS_KEY = Secret Access Key
+  
+### Final Setup
+  - Back within S3 buckets create folder media
+  - copy over existing media files to this folder
+  - Under Manage Public Permisssions select Grant public read access to this object
 
 
 ## Credits
