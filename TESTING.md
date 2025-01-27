@@ -140,6 +140,12 @@ I asked a number of friends both inside and outside of the Code Institute commun
 
 It was suggested that I could add additional features to the site, which included links to each restaurant and to edit the styling of the log out navbar.
 
+# Issues
+
+I encountered a number of issues throughout my project, for example, I changed my database on the /admin page on my site, but the changes wouldnt render when pushed to heroku. I had to override the changes and create a db.json file so my database on heroku could find them.
+
+I regularly used Chat GPT and my local AI Gemini on my laptop to help find solutions to my issues.
+
 
 ## Known bugs and fixes
 
