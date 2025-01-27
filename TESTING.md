@@ -101,13 +101,13 @@ I also personally tested the website on Samsung Galaxy S22, Samsung Chrome book,
 
 ### HTML 
 
-![HTML Validation](static/images/w3c-html.png)
+![HTML Validation](media/html-validation.png)
 
-- All of the HTML pages passed the validator bar a warning on the h1 header. It recomends not to use h1 unless it is a heading, however I believed it looked better aesthetically this way so left it as it is.
+- All of the HTML pages passed the validator however it did raise issues with block content testing. I have inspected the site and it loads and works correctly.
 
 ### CSS <!-- omit in toc -->
 
-![CSS Validation](static/images/css-validation.png)
+![CSS Validation](media/css-validation.png)
 
 - All pages passed the W3C CSS Validation.
 
@@ -115,7 +115,7 @@ I also personally tested the website on Samsung Galaxy S22, Samsung Chrome book,
 
 All website pages were tested using the A11y Color Contrast Accessibility Checker and no automated colour contrast issues were found.
 
-![a11y Color Validation](static/images/a11y-validator.png)
+![a11y Color Validation](media/color-contrast.png)
 
 ## JavaScript Testing <!-- omit in toc -->
 
@@ -129,6 +129,10 @@ All website pages were tested using the A11y Color Contrast Accessibility Checke
 
 ![CI Python Linter](static/images/python-testing.png)
 
+## Development Tools <!-- omit in toc -->
+
+- I used my local development tools on my Windows laptop to contuinually check for bugs and performance.
+
 
 # Peer Review
 
@@ -139,9 +143,8 @@ It was suggested that I could add additional features to the site, which include
 
 ## Known bugs and fixes
 
-- Styling of the Navbar when logged in isn't as good as it should be, need to improve the css for "logout"
+- The checkout page is slow to update, if I had time I would try and alter the load times to speed it up.
 - The performance level of the About page needs improving to speed up loading time. This can be fixed at a later date as I did not have time.
-- Add extra security in the form of a confirm password on the sign up page.
+- Add extra security in Stripe if this was to be converted to a fully functioning site.
 - Need to fix the styling of the Footer as one icon doesnt render properly.
-- Need to change to h1 to pass all w3c html validation checks.
-- In future I could render the information submitted in the contact forms straight in to the review boxes on the home page.
+- The Mailchimp could cause users to get spam emails. It is advised not to use it as this site is only for educational purposes.

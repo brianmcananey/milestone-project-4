@@ -126,7 +126,8 @@ Our primary goal is to create a user-friendly online platform that offers a wide
 ## Wireframes
 The basic layout of Aphrodite Clothing was created with [Balsamiq](https://balsamiq.com/).
 
-![Wireframes](static/images/wireframes.png)
+![Wireframes](media/wireframe-dektop.png)
+![Wireframes](media/wireframe-mobile.png)
 
 
 
