@@ -127,7 +127,10 @@ All website pages were tested using the A11y Color Contrast Accessibility Checke
 
 - I valdated my python through the Code Institute Python Linter
 
-![CI Python Linter](static/images/python-testing.png)
+![CI Python Linter](media/contexts-py-pep8.jpeg)
+![CI Python Linter](media/custom-storages-pep8.jpeg)
+![CI Python Linter](media/manage-py-pep8.jpeg)
+![CI Python Linter](media/urls-py-pep8.jpeg)
 
 ## Development Tools <!-- omit in toc -->
 
